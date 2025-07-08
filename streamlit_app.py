@@ -6,10 +6,10 @@ import streamlit as st
 import pandas as pd
 from app.main import get_prices
 
-st.set_page_config(page_title="🌍 Global Price Comparator", layout="wide")
+st.set_page_config(page_title=" Global Price Comparator", layout="wide")
 
-st.title("🌍 Global Price Comparison Tool (Groq LLM)")
-st.markdown("🔍 Compare prices for any product across all major websites and countries using Groq-powered LLM.")
+st.title("Global Price Comparison Tool (Groq LLM)")
+st.markdown("Compare prices for any product across all major websites and countries using Groq-powered LLM.")
 
 query = st.text_input("Enter product name", "iPhone 16 Pro, 128GB")
 country = st.text_input("Enter country name (e.g., US, India, UK, Germany)", "US")
