@@ -1,30 +1,44 @@
 # 🌍 Global Price Comparison Tool
 
-A smart tool that fetches the **lowest prices** for any product from **multiple websites** across the world based on the **country** and **product query** you provide.
+This tool helps users find the **lowest prices** for any product from multiple websites based on the **country** they are shopping from.
 
-Powered by **Groq LLM (Mixtral)** to ensure **accurate product matching**, even when websites list similar or unrelated products.
+It supports **any country** and **any product** (like phones, earphones, laptops, etc.), and uses **AI (Groq LLM)** to make sure the product matched is accurate.
 
 ---
 
 ##  Features
 
--  Works for **any country** and **any product**
--  Searches websites like Amazon, Flipkart, Croma, Reliance Digital, Apple, etc.
--  Uses **LLM (Groq)** to filter only exact product matches
--  Results are **ranked by lowest price**
--  Google Search + custom scraping for coverage
-- ⚙ Fully **Dockerized**
--  Optional: Use with **Streamlit frontend** or **curl**
+- Search products from websites like Amazon, Flipkart, Reliance Digital, Apple, etc.
+- Works for all countries and categories
+- Results sorted by **lowest price**
+- Uses **Groq LLM** to filter correct product match
+- Works with **Streamlit frontend** or with **curl (API only)**
 
 ---
 
-## 
-Input Format
-
-Provide a JSON input like:
+##  Sample Input
 
 ```json
 {
   "country": "US",
   "query": "iPhone 16 Pro, 128GB"
 }
+
+## Output
+
+[
+  {
+    "link": "https://www.apple.com/us/iphone-16-pro",
+    "price": "999",
+    "currency": "USD",
+    "productName": "Apple iPhone 16 Pro (128GB)",
+    "site": "Apple US"
+  },
+  {
+    "link": "https://www.amazon.com/iphone-16-pro-128gb-black",
+    "price": "1029",
+    "currency": "USD",
+    "productName": "iPhone 16 Pro - 128GB - Black",
+    "site": "Amazon"
+  }
+]
